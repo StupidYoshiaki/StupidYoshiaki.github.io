@@ -1,0 +1,1 @@
+# StupidYoshiaki.github.io
