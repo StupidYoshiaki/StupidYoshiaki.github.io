@@ -1,16 +1,27 @@
+/* 全体設定 */
 body {
     font-family: sans-serif;
     margin: 0;
     background-color: #f4f4f4;
+    color: #222; /* 基本の文字色 */
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
+/* リンク */
+a {
+    color: rgb(85, 144, 136);
+    text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
+/* 見出し */
+h1, h2 {
+    color: #111;
+}
+
+/* レイアウト */
 main {
     max-width: 800px;
     margin: 2rem auto;
@@ -24,9 +35,43 @@ section {
     border-radius: 5px;
 }
 
-footer {
+/* 自己紹介セクション */
+#about {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+#about .about-text {
+    flex: 2;
+}
+
+#about .about-image {
+    flex: 1;
     text-align: center;
-    padding: 1rem 0;
-    background-color: #333;
-    color: #fff;
+}
+
+.profile-pic {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* 経歴セクション */
+#history ul, #experience ul {
+    list-style: none;
+    padding: 0;
+}
+
+#history li, #experience li {
+    margin-bottom: 0.5rem;
+}
+
+#history li span, #experience li span {
+    display: inline-block;
+    width: 180px;
+    margin-right: 1rem;
+    color: #666;
+    white-space: nowrap;
 }
