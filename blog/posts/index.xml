@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ブログ記事一覧 on ブログ</title>
+    <title>日記</title>
     <link>http://localhost:1313/posts/index.html</link>
-    <description>Recent content in ブログ記事一覧 on ブログ</description>
+    <description>Recent content on 日記</description>
     <generator>Hugo</generator>
     <language>ja-jp</language>
     <lastBuildDate>Tue, 05 Aug 2025 00:00:00 +0900</lastBuildDate>
@@ -13,7 +13,7 @@
       <link>http://localhost:1313/posts/%E6%9C%80%E5%88%9D%E3%81%AE%E6%8A%95%E7%A8%BF.html</link>
       <pubDate>Tue, 05 Aug 2025 00:00:00 +0900</pubDate>
       <guid>http://localhost:1313/posts/%E6%9C%80%E5%88%9D%E3%81%AE%E6%8A%95%E7%A8%BF.html</guid>
-      <description>&lt;h1 id=&#34;初めてのブログ投稿&#34;&gt;初めてのブログ投稿&lt;/h1&gt;&#xA;&lt;p&gt;これはHugoで生成された最初のブログ投稿です。&lt;/p&gt;&#xA;&lt;h2 id=&#34;画像のテスト&#34;&gt;画像のテスト&lt;/h2&gt;&#xA;&lt;p&gt;ここに画像を追加できます。&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;初めてのブログ投稿&#34;&gt;初めてのブログ投稿&lt;/h1&gt;&#xA;&lt;p&gt;これはHugoで生成された最初のブログ投稿です。&lt;/p&gt;&#xA;&lt;h2 id=&#34;これはh2タイトルです&#34;&gt;これはH2タイトルです&lt;/h2&gt;&#xA;&lt;p&gt;Markdownで記述されています。&lt;/p&gt;&#xA;&lt;h3 id=&#34;画像のテスト&#34;&gt;画像のテスト&lt;/h3&gt;&#xA;&lt;p&gt;ここに画像を追加できます。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

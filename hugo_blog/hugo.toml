@@ -1,6 +1,6 @@
 baseURL = 'https://StupidYoshiaki.github.io/'
 languageCode = 'ja-jp'
-title = 'ブログ'
+title = '日記'
 theme = 'ananke'
 publishDir = '../blog'
 relativeURLs = true
@@ -10,5 +10,5 @@ uglyURLs = true
   [[menu.main]]
     identifier = "home"
     name = "ホーム"
-    url = "/"
+    url = "https://StupidYoshiaki.github.io/"
     weight = -110
