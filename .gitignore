@@ -1,0 +1,27 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Hugo
+public/
+resources/
+i18n/
+.hugo_build.lock
+
+# Git Submodules
+.gitmodules
+
+# Editor/IDE specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Node.js (if used in the future)
+node_modules/
