@@ -60,7 +60,42 @@ hugo new content posts/YYYY-MM-DD-記事のタイトル.md
 
     例: `![画像の説明](画像ファイル名.jpg)`
 
-### 2.2. 変更の公開
+### 2.2. 記事の編集
+
+記事を編集するには、該当するMarkdownファイル（例: `hugo_blog/content/posts/記事のタイトル/index.md`）を直接編集します。
+
+### 2.3. 記事の削除
+
+記事を削除するには、該当する記事のディレクトリを削除します。
+
+例: `hugo_blog/content/posts/記事のタイトル/` ディレクトリを削除します。
+
+```bash
+rm -rf hugo_blog/content/posts/記事のタイトル
+```
+
+### 2.4. 下書き記事の扱い
+
+記事のフロントマターで `draft: true` と設定されている記事は、デフォルトでは公開サイトに表示されません。
+
+-   **公開する**: `draft: true` を `draft: false` に変更します。
+-   **下書きのままローカルで確認する**: `hugo_blog` ディレクトリで `hugo server --buildDrafts` コマンドを実行すると、下書き記事も表示されます。
+
+### 2.5. タグとカテゴリの追加
+
+記事のフロントマターに `tags` や `categories` を追加することで、記事にタグやカテゴリを設定できます。
+
+```markdown
+---
+title: "記事のタイトル"
+date: YYYY-MM-DDTHH:MM:SS+09:00
+draft: false
+tags: ["プログラミング", "日記"] # 複数のタグを設定
+categories: ["技術"] # 複数のカテゴリを設定
+---
+```
+
+### 2.6. 変更の公開
 
 1.  変更したファイル（新しい記事のディレクトリと`index.md`、追加した画像など）をGitに追加します。
     ```bash
