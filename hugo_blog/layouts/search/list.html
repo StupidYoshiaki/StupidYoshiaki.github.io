@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
     <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
@@ -60,9 +59,69 @@
 
     {{ block "header" . }}{{ partials.Include "site-header.html" .}}{{ end }}
     <main class="pb7" role="main">
-      {{ block "main" . }}{{ end }}
+      <div class="ph3 ph5-ns">
+        <div class="cf w-100 center">
+          <div class="fl w-100 pa2">
+            <h1>{{ .Title }}</h1>
+            <input type="text" id="search-input" placeholder="検索キーワードを入力...">
+            <ul id="search-results"></ul>
+          </div>
+        </div>
+      </div>
     </main>
-    {{/* ここを修正 */}}
-    {{ partial "footer.html" . }} 
+    {{ partial "footer.html" . }}
+
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script>
+      (function() {
+        var idx = lunr(function () {
+          this.ref('uri');
+          this.field('title', { boost: 10 });
+          this.field('content');
+        });
+
+        var pages = {};
+
+        // Fetch the search index
+        fetch('{{ "index.json" | relURL }}')
+          .then(response => response.json())
+          .then(data => {
+            data.forEach(function (page) {
+              idx.add(page);
+              pages[page.uri] = page;
+            });
+          });
+
+        var searchInput = document.getElementById('search-input');
+        var searchResults = document.getElementById('search-results');
+
+        searchInput.addEventListener('keyup', function () {
+          var query = this.value;
+          var results = idx.search(query);
+          displayResults(results);
+        });
+
+        function displayResults(results) {
+          var ul = document.createElement('ul');
+          if (results.length) {
+            results.forEach(function (result) {
+              var page = pages[result.ref];
+              var li = document.createElement('li');
+              var a = document.createElement('a');
+              a.href = page.uri;
+              a.textContent = page.title;
+              li.appendChild(a);
+              ul.appendChild(li);
+            });
+          } else {
+            var li = document.createElement('li');
+            li.textContent = '検索結果が見つかりませんでした。';
+            ul.appendChild(li);
+          }
+          searchResults.innerHTML = '';
+          searchResults.appendChild(ul);
+        }
+      })();
+    </script>
   </body>
 </html>
