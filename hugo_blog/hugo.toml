@@ -10,5 +10,5 @@ uglyURLs = true
   [[menu.main]]
     identifier = "home"
     name = "ホーム"
-    url = "https://StupidYoshiaki.github.io/"
+    url = "/blog/"
     weight = -110
