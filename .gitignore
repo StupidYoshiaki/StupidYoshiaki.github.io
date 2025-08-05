@@ -15,7 +15,6 @@ i18n/
 .hugo_build.lock
 
 # Git Submodules
-.gitmodules
 
 # Editor/IDE specific files
 .vscode/
