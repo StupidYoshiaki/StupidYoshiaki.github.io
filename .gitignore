@@ -13,8 +13,6 @@ public/
 resources/
 i18n/
 .hugo_build.lock
-blog/
-corpus/
 
 # Git Submodules
 
