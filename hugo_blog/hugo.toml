@@ -1,15 +1,33 @@
-baseURL = 'https://StupidYoshiaki.github.io/blog/'
+baseURL = 'https://StupidYoshiaki.github.io/corpus/'
 languageCode = 'ja-jp'
-title = '日記'
+title = 'StupidYoshiaki'
 theme = 'ananke'
-publishDir = '../blog'
+publishDir = '../corpus'
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
+[markup.goldmark.renderer]
+unsafe = true
+
 [menu]
+  [[menu.main]]
+    identifier = "diary"
+    name = "日記"
+    url = "/diary/"
+    weight = -100
+
+  [[menu.main]]
+    identifier = "memo"
+    name = "メモ"
+    url = "/memo/"
+    weight = -90
+
   [[menu.main]]
     identifier = "search"
     name = "検索"
     url = "/search/"
-    weight = -90
+    weight = -80
+
+[params]
+  custom_css = ["css/custom.css"]
