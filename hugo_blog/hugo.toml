@@ -3,12 +3,5 @@ languageCode = 'ja-jp'
 title = '日記'
 theme = 'ananke'
 publishDir = '../blog'
-relativeURLs = true
-uglyURLs = true
 
 [menu]
-  [[menu.main]]
-    identifier = "home"
-    name = "ホーム"
-    url = "/blog/"
-    weight = -110
