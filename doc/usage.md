@@ -24,12 +24,12 @@
 `hugo_blog` ディレクトリに移動し、以下のコマンドを実行します。
 
 ```bash
-hugo new content posts/YYYY-MM-DD-記事のタイトル.md
+hugo new posts/YYYY-MM-DD-記事のタイトル --kind posts
 ```
 
-例: `hugo new content posts/2025-08-05-初めての日記.md`
+例: `hugo new posts/2025-08-05-新しい日記 --kind posts`
 
-このコマンドを実行すると、`hugo_blog/content/posts/` 以下に指定したパスでMarkdownファイルが作成され、自動的にフロントマター（タイトル、日付、`draft: true`など）が挿入されます。
+このコマンドを実行すると、`hugo_blog/content/posts/YYYY-MM-DD-記事のタイトル/` というディレクトリが作成され、その中に `index.md` が生成されます。この `index.md` と同じディレクトリに画像を配置すれば、Page Bundleとして画像を管理できます。
 
 作成されたファイルの `draft: true` を `draft: false` に変更し、記事の本文を記述してください。
 
@@ -51,7 +51,7 @@ hugo new content posts/YYYY-MM-DD-記事のタイトル.md
     # categories: ["カテゴリ1"] # 必要であればカテゴリを追加
     ---
 
-    ここに記事の本文をMarkdownで記述します。
+    ここに記事の本文を記述します。
     ```
 
     ### 画像の挿入

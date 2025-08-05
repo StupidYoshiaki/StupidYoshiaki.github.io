@@ -1,5 +1,5 @@
 ---
 title: "検索"
-layout: "search"
+layout: "search/list"
 url: "/search/"
 ---
